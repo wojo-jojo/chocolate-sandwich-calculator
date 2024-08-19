@@ -17,7 +17,7 @@
             <i class="bi bi-cake-fill display-1 me-2"></i>
             <div class="d-inline-block">
               <div class="display-5">CSCalc</div>
-              <small class="d-none d-md-block">Make your own <span class="text-info">chocolate sandwich</span></small>
+              <small class="d-none d-sm-block">Make your own <span class="text-info">chocolate sandwich</span></small>
             </div>
           </a>
         </div>
@@ -30,10 +30,9 @@
     </div>
   </header>
 
-  <main class="py-3">
+  <main>
     <div class="container">
-      <h1>Calculate amounts of ingredients</h1>
-      <div class="row">
+      <div class="row mb-3">
         <div class="container gy-4 col-lg-6">
           <h2>Enter your tray size</h2>
           <div class="row align-items-center mb-4">
@@ -42,12 +41,18 @@
             </div>
             <div class="col">
               <div class="input-group m-1">
-                <input id="original-size-x" class="form-control-sm tray-size-input" type="number" min="1" max="100" step="1" value="25" disabled>
-                <div class="input-group-text">cm</div>
+                <div class="form-floating form-floating-tray-size-input">
+                  <input id="original-size-x"  class="form-control tray-size-input" type="number" min="1" max="100" step="1"placeholder="25" value="25" required disabled>
+                  <label for="original-size-x">Length</label>
+                </div>
+                <span class="input-group-text">cm</span>
               </div>
               <div class="input-group m-1">
-                <input id="original-size-y" class="form-control-sm tray-size-input" type="number" min="1" max="100" step="1" value="25" disabled>
-                <div class="input-group-text">cm</div>
+                <div class="form-floating form-floating-tray-size-input">
+                  <input id="original-size-y"  class="form-control tray-size-input" type="number" min="1" max="100" step="1" placeholder="25" value="25" required disabled>
+                  <label for="original-size-y">Width</label>
+                </div>
+                <span class="input-group-text">cm</span>
               </div>
             </div>
           </div>
@@ -56,14 +61,33 @@
               Your tray size:
             </div>
             <div class="col mb-3">
-              <div class="input-group m-1">
-                <input id="user-size-x"  class="form-control-sm tray-size-input" type="number" min="1" max="100" step="1" value="25" required>
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" role="switch" id="switch-circular-tray">
+                <label class="form-check-label" for="switch-circular-tray">Circular tray</label>
+              </div>
+              <div class="input-group m-1 d-none" id="input-group-user-size-r">
+                <div class="form-floating form-floating-tray-size-input">
+                  <input id="user-size-r"  class="form-control tray-size-input" type="number" min="1" max="50" step="1" required placeholder="17" value="17">
+                  <label for="user-size-r">Radius</label>
+                </div>
                 <span class="input-group-text">cm</span>
               </div>
-              <div class="input-group m-1">
-                <input id="user-size-y"  class="form-control-sm tray-size-input" type="number" min="1" max="100" step="1" value="25" required>
+              <div class="input-group m-1" id="input-group-user-size-x">
+                <div class="form-floating form-floating-tray-size-input">
+                  <input id="user-size-x"  class="form-control tray-size-input" type="number" min="1" max="100" step="1" placeholder="25" value="25" required>
+                  <label for="user-size-x">Length</label>
+                </div>
                 <span class="input-group-text">cm</span>
               </div>
+              <div class="input-group m-1" id="input-group-user-size-y">
+                <div class="form-floating form-floating-tray-size-input">
+                  <input id="user-size-y"  class="form-control tray-size-input" type="number" min="1" max="100" step="1" placeholder="25" value="25" required>
+                  <label for="user-size-y">Width</label>
+                </div>
+                <span class="input-group-text">cm</span>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -128,7 +152,7 @@
 
   <!-- Modal -->
   <div class="modal fade" id="modal-about-site" tabindex="-1">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">What is this website?</h1>
