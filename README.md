@@ -14,4 +14,4 @@ An educational web project for practicing Bootstrap and JavaScript. This calcula
 
 ## Live Demo
 See it in action here:
-[https://wojo-jojo.github.io/chocolate-sandwich-calculator/](https://wojo-jojo.github.io/chocolate-sandwich-calculator/)
+[https://woytke.github.io/chocolate-sandwich-calculator/](https://woytke.github.io/chocolate-sandwich-calculator/)
